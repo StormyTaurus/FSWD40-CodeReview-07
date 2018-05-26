@@ -1,9 +1,9 @@
 // Data Model of Locations
 
 class locations {
-    constructor (public title: string, public city: string, public address: string, public zipcode: number, public img: string, public created: Date){};
+    constructor(public title: string, public city: string, public address: string, public zipcode: number, public img: string, public created: Date) { };
 
-    render(){
+    render() {
         document.getElementById("row1").innerHTML += `
         <div class="card col-lg-3 col-md-6 mt-3">
         <!-- Card image -->
@@ -28,14 +28,14 @@ class locations {
 // Data Model of Restaurants
 
 class restaurants extends locations {
-    constructor (title: string, city: string, address: string, zipcode: number, img: string, public telephoneNumber: string, public type: string, public webAddress: string, created: Date){
+    constructor(title: string, city: string, address: string, zipcode: number, img: string, public telephoneNumber: string, public type: string, public webAddress: string, created: Date) {
         super(title, city, address, zipcode, img, created);
         this.telephoneNumber = telephoneNumber,
-        this.type= type,
-        this.webAddress = webAddress
+            this.type = type,
+            this.webAddress = webAddress
     };
-render(){
-    document.getElementById("row2").innerHTML += `
+    render() {
+        document.getElementById("row2").innerHTML += `
     <div class="card col-lg-3 col-md-6 mt-3">
     <!-- Card image -->
   <div class="view overlay">
@@ -63,16 +63,16 @@ render(){
 // Data Model of Events
 
 class events extends locations {
-    constructor (title: string, city: string, address: string, zipcode: number, img: string, public eventDate: string, public eventTime: string, public ticketPrice: number){
+    constructor(title: string, city: string, address: string, zipcode: number, img: string, public eventDate: string, public eventTime: string, public ticketPrice: number) {
 
         super(title, city, address, zipcode, img);
         this.eventDate = eventDate,
-        this.eventTime = eventTime,
-        this.ticketPrice = ticketPrice
+            this.eventTime = eventTime,
+            this.ticketPrice = ticketPrice
     };
 
-render(){
-    document.getElementById("row3").innerHTML += `
+    render() {
+        document.getElementById("row3").innerHTML += `
         <div class="card col-lg-3 col-md-6 mt-3">
         <div class="view overlay">
         <img class="card-img-top rounded mt-5 d-none d-sm-block" src="${this.img}" alt="">
@@ -93,22 +93,22 @@ render(){
         </div>
      </div>
     `
-    };  
+    };
 };
 
 //Create Locations
 
-let zoo = new locations("Zoo Schönbrunn <small>The world's oldest Zoo</small>", "Vienna", "Maxingstraße 13b", 1130, "img/zoo.png", new Date("24.May 2018 12:45"));
-let schönbrunn = new locations("Schönbrunn Palace", "Vienna", "Schönbrunner Schloßstraße 47", 1130, "img/schönbrunn.png", new Date("24.May 2018 12:45"));
-let naturhisto = new locations("Natural History Museum", "Vienna", "Burgring 7", 1010, "img/naturhisto.png" , new Date("24.May 2018 12:45"));
-let stephansdom = new locations("St. Stephen's Cathedral", "Vienna", "Stephansplatz 3", 1010, "img/stephansdom.png", new Date("24.May 2018 12:45"))
+let zoo = new locations("Zoo Schönbrunn <small>The world's oldest Zoo</small>", "Vienna", "Maxingstraße 13b", 1130, "img/zoo.png", new Date("12.June 2016 12:45"));
+let schönbrunn = new locations("Schönbrunn Palace", "Vienna", "Schönbrunner Schloßstraße 47", 1130, "img/schönbrunn.png", new Date("05.April 2017 10:45"));
+let naturhisto = new locations("Natural History Museum", "Vienna", "Burgring 7", 1010, "img/naturhisto.png", new Date("16.Feb 2001 14:45"));
+let stephansdom = new locations("St. Stephen's Cathedral", "Vienna", "Stephansplatz 3", 1010, "img/stephansdom.png", new Date("24.Aug 2014 16:45"))
 
 //Create Restaurants
 
-let vegetasia = new restaurants("Vegetasia", "Vienna", "Ungargasse 57", 1030, "img/vegetasia.png", " 01/7138332", "vegetarian", "www.vegetasia.at", new Date("24.May 2018 12:45"));
-let lovinghut = new restaurants("Loving Hut", "Vienna", "Neubaugürtel 3 8/5", 1070, "img/lovinghut.png", " 01/2939182", "vegetarian", "www.lovinghut.at", new Date("24.May 2018 12:45"));
-let xus = new restaurants("Xu's Cooking", "Vienna", "Kaiserstraße 45", 1070, "img/xus.png", " 01/5231091", "vegetarian", "www.xus-cooking.at", new Date("24.May 2018 12:45"));
-let wok = new restaurants("Wokmeister", "Vienna", "Brünner Str. 330", 1210, "img/wokmeister.png", " 01/9477153", "asian", "www.wokmeister.at", new Date("24.May 2018 12:45"));
+let vegetasia = new restaurants("Vegetasia", "Vienna", "Ungargasse 57", 1030, "img/vegetasia.png", " 01/7138332", "vegetarian", "www.vegetasia.at", new Date("24.Nov 2007 12:00"));
+let lovinghut = new restaurants("Loving Hut", "Vienna", "Neubaugürtel 3 8/5", 1070, "img/lovinghut.png", " 01/2939182", "vegetarian", "www.lovinghut.at", new Date("22.Oct 2011 14:15"));
+let xus = new restaurants("Xu's Cooking", "Vienna", "Kaiserstraße 45", 1070, "img/xus.png", " 01/5231091", "vegetarian", "www.xus-cooking.at", new Date("07.Sep 2015 13:30"));
+let wok = new restaurants("Wokmeister", "Vienna", "Brünner Str. 330", 1210, "img/wokmeister.png", " 01/9477153", "asian", "www.wokmeister.at", new Date("12.April 2018 12:15"));
 
 //Create Events
 
@@ -119,8 +119,8 @@ let phantom = new events("Phantom der Oper<br><small>Deborah Sasson</small>", "V
 
 let items: any[] = [zoo, schönbrunn, naturhisto, stephansdom, vegetasia, lovinghut, xus, wok, gruber, katy, lenny, phantom];
 
-function displayItems(arr: any[]){
-    arr.forEach((item:any)=>{
+function displayItems(arr: any[]) {
+    arr.forEach((item: any) => {
         item.render();
     });
 };

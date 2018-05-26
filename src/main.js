@@ -69,15 +69,15 @@ var events = /** @class */ (function (_super) {
 }(locations));
 ;
 //Create Locations
-var zoo = new locations("Zoo Schönbrunn <small>The world's oldest Zoo</small>", "Vienna", "Maxingstraße 13b", 1130, "img/zoo.png", new Date("24.May 2018 12:45"));
-var schönbrunn = new locations("Schönbrunn Palace", "Vienna", "Schönbrunner Schloßstraße 47", 1130, "img/schönbrunn.png", new Date("24.May 2018 12:45"));
-var naturhisto = new locations("Natural History Museum", "Vienna", "Burgring 7", 1010, "img/naturhisto.png", new Date("24.May 2018 12:45"));
-var stephansdom = new locations("St. Stephen's Cathedral", "Vienna", "Stephansplatz 3", 1010, "img/stephansdom.png", new Date("24.May 2018 12:45"));
+var zoo = new locations("Zoo Schönbrunn <small>The world's oldest Zoo</small>", "Vienna", "Maxingstraße 13b", 1130, "img/zoo.png", new Date("12.June 2016 12:45"));
+var schönbrunn = new locations("Schönbrunn Palace", "Vienna", "Schönbrunner Schloßstraße 47", 1130, "img/schönbrunn.png", new Date("05.April 2017 10:45"));
+var naturhisto = new locations("Natural History Museum", "Vienna", "Burgring 7", 1010, "img/naturhisto.png", new Date("16.Feb 2001 14:45"));
+var stephansdom = new locations("St. Stephen's Cathedral", "Vienna", "Stephansplatz 3", 1010, "img/stephansdom.png", new Date("24.Aug 2014 16:45"));
 //Create Restaurants
-var vegetasia = new restaurants("Vegetasia", "Vienna", "Ungargasse 57", 1030, "img/vegetasia.png", " 01/7138332", "vegetarian", "www.vegetasia.at", new Date("24.May 2018 12:45"));
-var lovinghut = new restaurants("Loving Hut", "Vienna", "Neubaugürtel 3 8/5", 1070, "img/lovinghut.png", " 01/2939182", "vegetarian", "www.lovinghut.at", new Date("24.May 2018 12:45"));
-var xus = new restaurants("Xu's Cooking", "Vienna", "Kaiserstraße 45", 1070, "img/xus.png", " 01/5231091", "vegetarian", "www.xus-cooking.at", new Date("24.May 2018 12:45"));
-var wok = new restaurants("Wokmeister", "Vienna", "Brünner Str. 330", 1210, "img/wokmeister.png", " 01/9477153", "asian", "www.wokmeister.at", new Date("24.May 2018 12:45"));
+var vegetasia = new restaurants("Vegetasia", "Vienna", "Ungargasse 57", 1030, "img/vegetasia.png", " 01/7138332", "vegetarian", "www.vegetasia.at", new Date("24.Nov 2007 12:00"));
+var lovinghut = new restaurants("Loving Hut", "Vienna", "Neubaugürtel 3 8/5", 1070, "img/lovinghut.png", " 01/2939182", "vegetarian", "www.lovinghut.at", new Date("22.Oct 2011 14:15"));
+var xus = new restaurants("Xu's Cooking", "Vienna", "Kaiserstraße 45", 1070, "img/xus.png", " 01/5231091", "vegetarian", "www.xus-cooking.at", new Date("07.Sep 2015 13:30"));
+var wok = new restaurants("Wokmeister", "Vienna", "Brünner Str. 330", 1210, "img/wokmeister.png", " 01/9477153", "asian", "www.wokmeister.at", new Date("12.April 2018 12:15"));
 //Create Events
 var gruber = new events("Monika Gruber <br> <small>Wahnsinn</small>", "Vienna", "Roland-Rainer-Platz 1", 1150, "img/gruber.png", "Fr, 06.07.2018", "20:00", 23.16);
 var katy = new events("Katy Perry <br> <small>WITNESS: The Tour</small>", "Vienna", "Roland-Rainer-Platz 1", 1150, "img/katy.png", "Mo, 04.06.2018", "19:30", 65.00);
